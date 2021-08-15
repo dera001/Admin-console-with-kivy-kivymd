@@ -6,16 +6,16 @@
 * kivymd [ kivymd 0.104.0dev to 1.0.0 ]
 
 # installation
-'''sh
+```sh
 pip install kivy[base] kivymd
-'''
+```
 # usage
 * clone the repo
 * cd into the main project directory
 * run this command on the terminal
 
-'''sh
+```sh
 python3 main.py
-'''
+```
 
 # built with love @ Dera Mobile Legacy (Nig)
