@@ -1,9 +1,9 @@
 # Admin-console-with-kivy-kivymd
 
 # Requirements
-* Python3  [ python3 3.6 to 3.8.9 ]
-* kivy [ kivy 1.11.1 to 2.0.0 ]
-* kivymd [ kivymd 0.104.0dev to 1.0.0 ]
+* Python3  [ python3 >= 3.6]
+* kivy 
+* kivymd [ kivymd == 0.104.0dev ]
 
 # installation
 ```sh
