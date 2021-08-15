@@ -1,8 +1,12 @@
 # Admin-console-with-kivy-kivymd
 
 # Screenshots
+
 <p align="center">
-    <img title="Dashboard" height="200" src="https://github.com/dera001/Admin-console-with-kivy-kivymd/blob/main/screenshots/Screenshot%20from%202021-08-15%2001-32-58.png" width="50%"/>
+    <img title="Dashboard" height="200" src="https://github.com/dera001/Admin-console-with-kivy-kivymd/blob/main/screenshots/Screenshot%20from%202021-08-15%2001-33-25.png" width="50%"/>
+</p>
+<p align="center">
+    <img title="lolx" height="200" src="https://github.com/dera001/Admin-console-with-kivy-kivymd/blob/main/screenshots/Screenshot%20from%202021-08-15%2001-32-58.png" width="50%"/>
 </p>
 <p align="center">
     <img title="User management" height="200" src="https://github.com/dera001/Admin-console-with-kivy-kivymd/blob/main/screenshots/Screenshot%20from%202021-08-15%2001-33-07.png" width="50%"/>
