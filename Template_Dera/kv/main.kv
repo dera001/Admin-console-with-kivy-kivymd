@@ -1,0 +1,96 @@
+#:import utils kivy.utils
+<ContentNavigationDrawer>:
+    orientation: "vertical"
+    padding: "8dp"
+    spacing: "8dp"
+    GridLayout:
+        cols:1
+        size_hint:1,None
+        size:"20dp","30dp"
+        MDIconButton:
+            icon: "close"
+            anchor_x:"left"
+            anchor_y:"top"
+            pos_hint: {"center_y": .1}
+            on_release: root.parent.set_state()
+    AnchorLayout:
+        anchor_x: "center"
+        size_hint_y: .5
+        Image:
+            id: avatar
+            source: "Image/Bulgin.jpg"
+    ScrollView:
+        bar_color:app.theme_cls.primary_color
+        MDList:
+            OneLineIconListItem:
+                text: "Dashboard"
+                on_press:
+                    root.nav_drawer.set_state("close")
+                    root.screen_manager.current = "home"
+                IconLeftWidget:
+                    icon: "speedometer"
+                    on_press:
+                        root.nav_drawer.set_state("close")
+                        root.screen_manager.current = "home"
+            OneLineIconListItem:
+                text: "Manage users"
+                on_press:
+                    root.nav_drawer.set_state("close")
+                    root.screen_manager.current = "users"
+                IconLeftWidget:
+                    icon: "account-details"
+                    on_press:
+                        root.nav_drawer.set_state("close")
+                        root.screen_manager.current = "users"
+            OneLineIconListItem:
+                text: "Manage product"
+                on_press:
+                    root.nav_drawer.set_state("close")
+                    root.screen_manager.current = "product"
+                IconLeftWidget:
+                    icon: "cart-plus"
+                    on_press:
+                        root.nav_drawer.set_state("close")
+                        root.screen_manager.current = "product"
+            OneLineIconListItem:
+                text: "Product Analysis"
+                on_press:
+                    root.nav_drawer.set_state("close")
+                    root.screen_manager.current = "analysis"
+                IconLeftWidget:
+                    icon: "chart-pie"
+                    on_press:
+                        root.screen_manager.current = "analysis"
+            OneLineIconListItem:
+                text: "Logout"
+                on_press:
+                    root.nav_drawer.set_state("close")
+                    root.screen_manager.current = "login"
+                IconLeftWidget:
+                    icon: "logout"
+                    on_press:
+                        root.screen_manager.current = "login"
+Bulgin: #Root Rule
+    cols: 1
+    id: Bulgin
+    MDToolbar:
+        id: toolbar
+        pos_hint: {"top": 1}
+        elevation: 10
+        title: "Administration Console"
+        left_action_items: [["menu", lambda x: nav_drawer.set_state("open")]]
+        right_action_items: [["account-circle", lambda x: print("account pressed")]]
+    MDNavigationLayout:
+        x: toolbar.height
+        size_hint_y: 1.0 - toolbar.height/root.height
+        ScreenManagement:
+            id:screen_manager
+            HomeScreen:
+                id: homescreen
+            UserScreen:
+                id: userscreen
+        MDNavigationDrawer:
+            id: nav_drawer
+            ContentNavigationDrawer:
+                screen_manager: screen_manager
+                nav_drawer: nav_drawer

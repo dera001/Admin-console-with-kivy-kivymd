@@ -1,0 +1,64 @@
+<HomeScreen>
+    name:"home"
+	MDBoxLayout:
+		orientation:'vertical'
+		padding:10,10
+		spacing:10
+		MDLabel:
+			text:"[b]Dashboard[/b]"
+			size_hint:1,None
+			markup:True
+			halign:"justify"
+			font_size:"20sp"
+            font_style:'H5'
+			size:"20sp","20sp"
+		ScrollView: 
+			do_scroll_x: False
+			do_scroll_y: True
+			size_hint_y: .99
+			MDBoxLayout:
+				orientation:'vertical'
+				adaptive_height: True
+				padding:10,10
+				spacing:15
+                FloatLayout:
+                    size_hint:1,None
+                    size:"250dp","250dp" 
+                    Image:
+                        source:"Image/bg1.png"
+                        size_hint:1,None
+                        size:"250dp","250dp"
+                        pos_hint:{"center_x":.5,"center_y":.5}
+                    MDLabel:
+                        text:"Total \n$ 200,000.00"
+                        pos_hint:{"center_x":.5,"center_y":.5}
+                        halign:"center"
+                        size_hint:1,None
+                        size:"20sp","10sp"
+                MDCard:
+                    orientation:"vertical"
+                    size_hint:1,None
+                    radius:12
+                    size:"100","320"
+                    elevation:10
+                    padding:10
+                    spacing:3
+                    MDList:
+                        TwoLineListItem:
+                            text: "Current"
+                            secondary_text: "••••••1234"
+                            tertiary_text: "$ 2,215.13"
+                        TwoLineListItem:
+                            text: "Home savings"
+                            secondary_text: "••••••5678"
+                            tertiary_text: "$ 8,678.88"
+                        TwoLineListItem:
+                            text: "Car savings"
+                            secondary_text: "••••••9012"
+                            tertiary_text: "$ 987.48"
+
+                        TwoLineListItem:
+                            text: "Holiday"
+                            secondary_text: "••••••3456"
+                            tertiary_text: "$ 253.00"
+
